@@ -1,0 +1,22 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Redirects for cleaner function URLs
+[[redirects]]
+  from = "/api/zcash-rpc"
+  to = "/.netlify/functions/zcash-rpc"
+  status = 200
+
+[[redirects]]
+  from = "/api/coingecko"
+  to = "/.netlify/functions/coingecko"
+  status = 200
+
+[[redirects]]
+  from = "/api/shielded-hourly"
+  to = "/.netlify/functions/shielded-hourly"
+  status = 200
